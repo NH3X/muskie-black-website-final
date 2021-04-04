@@ -14,6 +14,7 @@ import bg1 from "../../assets/images/muskie_bg.png";
 import bg2 from "../../assets/images/muskie_bg2.jpg"
 import bg3 from "../../assets/images/muskie_bg3.jpg"
 import bg4 from "../../assets/images/muskie_bg4.jpg"
+import AvInputContainer from 'availity-reactstrap-validation/lib/AvInputContainer';
 
 
 class Section extends Component {
@@ -21,12 +22,12 @@ class Section extends Component {
     render() {
         return (
             <React.Fragment>
-                <section className="hero-section-5" id="home" style={{ background: `url(${bg4})`, backgroundSize: "cover"}}>
+                <section className="hero-section-5" id="home">
                     <div className="bg-overlay"></div>
                     <Container>
                         <Row className="justify-content-center">
-                            <Col lg={8} >
-                                <div className="hero-wrapper text-center">
+                            <Col lg={8} className="align-content-center">
+                                <div className="hero-wrapper text-center" >
                                     <p className="font-16 text-uppercase text-white-50">Discover Muskie Black Today</p>
                                     <h1 className="hero-title text-white mb-4"><span className="text-primary">Muskie Black Management & Consulting</span><br /></h1>
 
