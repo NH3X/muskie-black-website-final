@@ -9,6 +9,11 @@ import {
 
 //Import Images
 import homeImg from "../../assets/images/home-img.png";
+import bg from "../../assets/images/bg.jpg";
+import bg1 from "../../assets/images/muskie_bg.png";
+import bg2 from "../../assets/images/muskie_bg2.jpg"
+import bg3 from "../../assets/images/muskie_bg3.jpg"
+import bg4 from "../../assets/images/muskie_bg4.jpg"
 
 
 class Section extends Component {
@@ -16,27 +21,21 @@ class Section extends Component {
     render() {
         return (
             <React.Fragment>
-                <section className="hero-section" id="home">
+                <section className="hero-section-5" id="home" style={{ background: `url(${bg4})`, backgroundSize: "cover"}}>
+                    <div className="bg-overlay"></div>
                     <Container>
                         <Row className="justify-content-center">
-                            <Col lg={6} className="align-content-center">
-                                <div className="hero-wrapper mb-4 ">
-                                    <p className="font-16 text-uppercase">Discover Muskie Black Today</p>
-                                    <h1 className="hero-title mb-4">Say good-bye to administration headaches today with <span className="text-primary">Muskie Black</span></h1>
+                            <Col lg={8} >
+                                <div className="hero-wrapper text-center">
+                                    <p className="font-16 text-uppercase text-white-50">Discover Muskie Black Today</p>
+                                    <h1 className="hero-title text-white mb-4"><span className="text-primary">Muskie Black Management & Consulting</span><br /></h1>
 
-                                    <p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine occidental</p>
+                                    <p className='font-20 text-white'>Assisting your business virtually. Wherever. Whenever.</p>
 
                                     <div className="mt-4">
-                                        <Link to="#" className="btn btn-primary mt-2 mr-2">Get Started</Link>
-                                        <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">Learn more</Link>
+                                        <Link to="#" className="btn btn-primary mt-2 mr-2">Enquire Now</Link>
+                                        {/* <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">Learn more</Link> */}
                                     </div>
-                                </div>
-
-                            </Col>
-
-                            <Col lg={6} sm={8}>
-                                <div className="home-img mt-3 mt-lg-0">
-                                    <img src={homeImg} alt="" className="img-fluid mx-auto d-block" />
                                 </div>
                             </Col>
                         </Row>

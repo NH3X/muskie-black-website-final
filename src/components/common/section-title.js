@@ -7,7 +7,7 @@ class SectionTitle extends Component {
             <React.Fragment>
                 <Row className="justify-content-center">
                     <Col lg={8}>
-                        <div className="text-center mb-5">
+                        <div className="text-center mb-4">
                             <h5 className="text-primary text-uppercase small-title">{this.props.subtitle}</h5>
                             <h4 className="mb-3">{this.props.title}</h4>
                             <p>{this.props.desc}</p>

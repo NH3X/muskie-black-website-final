@@ -47,7 +47,7 @@ class GetInTouch extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section " id="contact">
+        <section className="section bg-primary " id="contact">
           <Container>
             <SectionTitle title1="Get In" title2="Touch" />
             <div className="custom-form mt-4 pt-4">
@@ -151,7 +151,7 @@ class GetInTouch extends Component {
                       type="submit"
                       id="submit"
                       name="send"
-                      className="submitBnt btn btn-primary btn-custom"
+                      className="submitBnt btn btn-dark btn-custom"
                       value="Send Message"
                     />
                     <div id="simple-msg"></div>

@@ -82,7 +82,7 @@ p{
 }
 
 .bg-overlay {
-    background-color: rgba(35, 37, 47, 0.7);
+    background-color: rgba(39, 37, 37, 0.8);
     position: absolute;
     top: 0;
     right: 0;
@@ -245,7 +245,7 @@ $value in $colors {
         .nav-item{
             .nav-link{
                 line-height: 26px;
-                color: rgba($dark, 0.8);
+                color: rgba($white, 0.8);
                 transition: all 0.4s;
                 background-color: transparent !important;
                 padding: 6px 10px;
@@ -380,7 +380,7 @@ $value in $colors {
         position: absolute;
         width: 360px;
         height: 330px;
-        background-color: rgba($primary, 0.1);
+        background-color: rgba($primary, 0.5);
         border-radius: 30% 70% 59% 41% / 30% 38% 62% 70%;
         z-index: -1;
         top: 90px;
@@ -408,7 +408,7 @@ $value in $colors {
 /*--- Hero 5 ---*/
 
 .hero-section-5{
-    padding: 300px 0px 220px 0px;
+    padding: 300px 0px 180px 0px;
 }
 
 
@@ -632,7 +632,7 @@ $value in $colors {
     }    
 
     .hero-section{
-        padding-top: 130px;
+        padding-top: 180px;
     }
 }
 

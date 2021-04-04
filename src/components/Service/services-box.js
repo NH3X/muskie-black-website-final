@@ -8,8 +8,8 @@ class ServiceBox extends Component {
             <React.Fragment>
                 {
                     this.props.services.map((service, key) =>
-                    <Col xl={4} sm={6} key={key} >
-                        <div className="text-center p-4 mt-3">
+                    <Col xl={3} sm={6} key={key} >
+                        <div className="text-center p-4 mt-1">
                             <div className="avatar-md mx-auto mb-4">
                                 <span className="avatar-title rounded-circle bg-soft-primary">
                                     <i>

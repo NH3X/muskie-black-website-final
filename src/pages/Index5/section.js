@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
 //Import Images
-import bg1 from "../../assets/images/bg.jpg";
+import bg1 from "../../assets/images/muskie_bg.png";
 
 class Section extends Component {
 
