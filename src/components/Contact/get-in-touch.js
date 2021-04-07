@@ -7,6 +7,7 @@ import emailjs from 'emailjs-com'
 //Import Section Title
 import SectionTitle from "../common/section-title";
 import Spinner from "reactstrap/lib/Spinner";
+import { CONTACT_EMAIL_SERVICE_ID, CONTACT_EMAIL_TEMPLATE_ID, CONTACT_EMAIL_USER_ID } from "../../config/base";
 
 class GetInTouch extends Component {
   constructor(props) {
@@ -41,11 +42,13 @@ class GetInTouch extends Component {
           message: this.state.message
         }
 
+        console.log(`${CONTACT_EMAIL_SERVICE_ID}`)
+
         await emailjs.send(
-          "service_py8a7tr",
-          "template_cnd9aog",
+          `${CONTACT_EMAIL_SERVICE_ID}`,
+          `${CONTACT_EMAIL_TEMPLATE_ID}`,
           templateParams,
-          "user_6WGLR1NzOxFCpLcgE0Ag8"
+          `${CONTACT_EMAIL_USER_ID}`
         ).then(response => {
           this.setState({ msgSendSuccess: true, msgSending: false });
           console.log("Success!", response.status, response.text)

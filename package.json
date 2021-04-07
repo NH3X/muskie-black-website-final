@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "availity-reactstrap-validation": "^2.7.1",
     "bootstrap": "^4.5.0",
+    "dotenv": "^8.2.0",
     "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "feather-icons-react": "^0.4.1",

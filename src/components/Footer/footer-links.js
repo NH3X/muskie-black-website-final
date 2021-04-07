@@ -19,7 +19,7 @@ class FooterLinks extends Component {
                             </Link>
                         </div>
                         <div className="float-sm-right mt-4 mt-sm-0">
-                            <p className="copyright-desc text-white mb-0">{new Date().getFullYear()} © Invoza. Created by Themesdesign</p>
+                            <p className="copyright-desc text-white mb-0">{new Date().getFullYear()} © Muskie Black Management & Consulting</p>
                         </div>
                     </Col>
                 </Row>
