@@ -22,12 +22,11 @@ class Process extends Component {
     render() {
         return (
             <React.Fragment>
-        <section className="section bg-light" id="services">
+        <section className="section bg-light pb-0" id="services">
             <Container>
             <SectionTitle
                 subtitle="Services"
-                title="Services We Provide"
-                desc="It will be as simple as occidental in fact, it will be Occidental."
+                title="What we do"
             />
 
                 <Row>

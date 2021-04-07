@@ -64,8 +64,14 @@ p{
 
 .section{
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.small-section{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .vertical-content {
@@ -127,6 +133,9 @@ $value in $colors {
 
     .bg-soft-#{$name} {
         background-color: rgba(($value), 0.1) !important;
+    }
+    .bg-little-soft-#{$name} {
+        background-color: rgba(($value), 0.2) !important;
     }
     .text-#{$name} {
         color: #{$value} !important;
@@ -653,5 +662,12 @@ $value in $colors {
             display: none;
         }
     }
+}
+
+.spinner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $dark;
 }
 

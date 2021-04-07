@@ -34,7 +34,7 @@ class Section extends Component {
                                     <p className='font-20 text-white'>Assisting your business virtually. Wherever. Whenever.</p>
 
                                     <div className="mt-4">
-                                        <Link to="#" className="btn btn-primary mt-2 mr-2">Enquire Now</Link>
+                                        <Link to="#contact" className="btn btn-primary mt-2 mr-2">Enquire Now</Link>
                                         {/* <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">Learn more</Link> */}
                                     </div>
                                 </div>

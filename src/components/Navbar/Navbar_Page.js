@@ -23,6 +23,7 @@ class NavbarPage extends Component {
         this.state = {
             isOpenMenu: false
         };
+         
     }
 
     toggle = () => {
@@ -30,7 +31,13 @@ class NavbarPage extends Component {
     }
 
     render() {
+        // const navLinks = document.querySelectorAll('.nav-item')
+        // navLinks.forEach((l) => {
+        //     l.addEventListener('click', () => { this.toggle() })
+        // })
+
         //Store all Navigationbar Id into TargetID variable(Used for Scrollspy)
+
         let targetId = this.props.navItems.map((item) => {
             return (
                 item.idnm

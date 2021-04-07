@@ -1,10 +1,26 @@
 import React from 'react'
+import { Container } from 'reactstrap'
+import Col from 'reactstrap/lib/Col'
+import Row from 'reactstrap/lib/Row'
 
 const Mission = () => {
     return (
         <>
-            <section id="mission">
-                Our Mission
+            <section className="small-section bg-primary">
+                <Container>
+                    <Row>
+                        <Col lg={3} >
+                            <div className="hero-wrapper">
+                                <h1 className="hero-title text-white ">Our Mission</h1>
+                            </div>
+                        </Col>
+                        <Col>
+                        <div>
+                            <p className="text-white font-20 pl-5">"To virtually provide clients with the highest quality office administration and graphic design services; allowing them to focus entirely on their core passion"</p>
+                        </div>    
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         </>
     )
