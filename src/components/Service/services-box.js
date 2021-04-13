@@ -20,7 +20,7 @@ class ServiceBox extends Component {
                             <h5 className="font-18">{service.title}</h5>
                             <p className="mb-0 text-muted">{service.desc}</p>
                             <br />
-                                {service.items.map(item => <li className="mb-2 text-muted">{item}</li>)}
+                                {service.items.map(item => <li className="mb-2 text-primary">{item}</li>)}
                         </div>
                     </Col>
                     )

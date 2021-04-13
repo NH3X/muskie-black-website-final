@@ -43,10 +43,10 @@ class GetInTouch extends Component {
 
 
         await emailjs.send(
-          process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID,
-          process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID,
+          `${process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID}`,
+          `${process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID}`,
           templateParams,
-          process.env.REACT_APP_CONTACT_EMAIL_USER_ID
+          `${process.env.REACT_APP_CONTACT_EMAIL_USER_ID}`
         ).then(response => {
           this.setState({ msgSendSuccess: true, msgSending: false });
           console.log("Success!", response.status, response.text)
