@@ -31,7 +31,7 @@ class Footer extends Component {
                     <Col lg={4} sm={6} >
                         <div>
                             <h5 className="mb-4 footer-list-title">About Muskie Black</h5>
-                                    <p>We are skilled, independent professionals who remotely provide administrative, and creative business support services </p>
+                                    <p>We are skilled, independent professionals who remotely provide administrative, consulting and creative business support services </p>
                         </div>
                     </Col>
 
