@@ -11,10 +11,25 @@ class Process extends Component {
         super(props);
         this.state = {
             services : [
-                { icon : "edit", title : "Company Registration & Compliance", desc : "We provide services to help your company stay legal by ensuring that all your business documents and procedures comply with the Companies Act ( i.e rules and regulations, processes and policies etc) \n .-Company Registration Certificate, Income Tax Number, B-BBEE Certificate, Business Account (optional)" },
-                { icon: "dollar-sign", title: "Bookkeeping", desc: "Your accounts in safe hands. We offer credible, precise and diligent bookkeeping services making it easy for you to keep track of your financial transactions." },
-                { icon: "book-open", title: "Report Writing", desc: "We create surveys and analyse information compiled by clients for reports such as yearly, quarterly, annual, investors and projects etc" },
-                { icon: "image", title: "Graphic Design", desc: "We make use of optic compositions to communicate and solve problems in the form of Visual designing, User Interface, Publication designs and Marketing & Advertising for your business." }
+                { icon: "edit", 
+                title: "Company Registration & Compliance", 
+                desc: "We provide services to help your company stay legal by ensuring that all your business documents and procedures comply with the Companies Act" ,
+                items: ["Company Registration Certificate", "Income Tax Number", "B-BBEE Certificate", "Business Bank Accounts"]
+                },
+                { icon: "dollar-sign", 
+                title: "Bookkeeping", 
+                desc: "Your accounts in safe hands. We offer credible, precise and diligent bookkeeping services making it easy for you to keep track of your financial transactions.", 
+                items: []
+                },
+                { icon: "book-open", 
+                title: "Report Writing", 
+                desc: "We create surveys and analyse information compiled by clients for reports such as yearly, quarterly, annual, investors and projects etc",
+                items: ["Minutes of Meeting", "Proof Reading and Editing of Documents", "Academic Thesis"] 
+                },
+                { icon: "image", 
+                title: "Graphic Design", 
+                    desc: "We make use of optic compositions to communicate and solve problems for your business.",
+                    items: ["Visual designing", "User Interface", " Publication designs","Marketing & Advertising"] }
             ]
         }
     }

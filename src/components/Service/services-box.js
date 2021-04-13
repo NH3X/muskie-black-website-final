@@ -19,6 +19,8 @@ class ServiceBox extends Component {
                             </div>
                             <h5 className="font-18">{service.title}</h5>
                             <p className="mb-0 text-muted">{service.desc}</p>
+                            <br />
+                                {service.items.map(item => <li className="mb-0 text-muted">{item}</li>)}
                         </div>
                     </Col>
                     )

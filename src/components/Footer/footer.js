@@ -57,7 +57,23 @@ class Footer extends Component {
                                     <FeatherIcon icon="phone" className="icon-dual-light icons-sm mt-1 mr-2" />
                                     </i>
                                     <Media body>
-                                                <p>+27 73 224 7068</p>
+                                        <p>+27 73 224 7068</p>
+                                    </Media>
+                                </Media>
+                                <Media>
+                                    <i>
+                                    <FeatherIcon icon="facebook" className="icon-dual-light icons-sm mt-1 mr-2" />
+                                    </i>
+                                    <Media body>
+                                                <p style={{ position: "relative" }} >/MuskieBlack<a className="stretched-link" href="https://www.facebook.com/MuskieBlack"></a></p>
+                                    </Media>
+                                </Media>
+                                <Media>
+                                    <i>
+                                    <FeatherIcon icon="instagram" className="icon-dual-light icons-sm mt-1 mr-2" />
+                                    </i>
+                                    <Media body>
+                                                <p style={{position: "relative"}}>@muskie_black<a className="stretched-link" href="http://www.instagram.com/muskie_black"></a></p>
                                     </Media>
                                 </Media>
                             </div>

@@ -574,6 +574,12 @@ $value in $colors {
     color: rgba($white, 0.5);
     padding-top: 40px;
     padding-bottom: 30px;
+    
+    a{
+    line-height: 1.8;
+    font-size: 15px;
+    text-decoration: none;
+    }
 }
 
 .footer-list-title{
