@@ -13,23 +13,23 @@ class Process extends Component {
             services : [
                 { icon: "edit", 
                 title: "Company Registration & Compliance", 
-                desc: "We provide services to help your company stay legal by ensuring that all your business documents and procedures comply with the Companies Act" ,
-                items: ["Company Registration Certificate", "Income Tax Number", "B-BBEE Certificate", "Business Bank Accounts"]
+                desc: "We provide services to help your company stay legal by ensuring that all your business documents and procedures comply with the Companies Act." ,
+                items: ["Company Registration Certificates", "Income Tax Numbers", "B-BBEE Certificates"]
                 },
                 { icon: "dollar-sign", 
                 title: "Bookkeeping", 
                 desc: "Your accounts in safe hands. We offer credible, precise and diligent bookkeeping services making it easy for you to keep track of your financial transactions.", 
-                items: []
+                items: ["Management of accounts", "Bank account reconciliations", "Finanacial transaction recording" ]
                 },
                 { icon: "book-open", 
                 title: "Report Writing", 
-                desc: "We create surveys and analyse information compiled by clients for reports such as yearly, quarterly, annual, investors and projects etc",
+                desc: "We create surveys and analyse information compiled by clients for reports such as; yearly, quarterly, annual, investor meetings and projects etc.",
                 items: ["Minutes of Meeting", "Proof Reading and Editing of Documents", "Academic Thesis"] 
                 },
                 { icon: "image", 
                 title: "Graphic Design", 
-                    desc: "We make use of optic compositions to communicate and solve problems for your business.",
-                    items: ["Visual designing", "User Interface", " Publication designs","Marketing & Advertising"] }
+                    desc: "Creating a good impression is vital, so we make use of optic compositions to communicate with potential and current clients,  and solve problems for your business. ",
+                    items: ["Visual designing", " Publication designs","Marketing & Advertising"] }
             ]
         }
     }

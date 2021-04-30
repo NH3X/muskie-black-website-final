@@ -41,10 +41,6 @@ class GetInTouch extends Component {
           message: this.state.message
         }
 
-        console.log(`Service ID: ${process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID}`)
-        console.log(`Template ID: ${process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID}`)
-        console.log(`USER ID: ${process.env.REACT_APP_CONTACT_EMAIL_USER_ID}`)
-
         await emailjs.send(
           `${process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID}`,
           `${process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID}`,
