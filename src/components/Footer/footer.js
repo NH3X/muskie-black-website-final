@@ -39,7 +39,7 @@ class Footer extends Component {
                     
                     </Col>
 
-                    <Col lg={3} sm={6}>
+                    <Col lg={4} sm={6}>
                         <div>
                             <h5 className="mb-4 footer-list-title">Contact</h5>
 
