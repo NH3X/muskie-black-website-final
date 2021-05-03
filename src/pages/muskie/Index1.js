@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import NavbarPage from "../../components/Navbar/Navbar_Page";
 import Section from './section';
 import Service from "../../components/Service/service";
@@ -20,6 +20,7 @@ class Muskie extends Component {
             imglight: false,
             navClass: ""
         };
+
     }
 
     componentDidMount() {
@@ -28,6 +29,12 @@ class Muskie extends Component {
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.scrollNavigation, true);
+        
+    }
+
+    scrollToContact = () => {
+        const contactComponent = document.getElementById("contact")
+        contactComponent.scrollIntoView({ behavior: "smooth" })
     }
 
     scrollNavigation = () => {
@@ -48,7 +55,7 @@ class Muskie extends Component {
                 <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} imglight={this.state.imglight} />
 
                 {/* Importing section */}
-                <Section />
+                <Section scrollToContact={this.scrollToContact}/>
 
                 {/* Importing section */}
                 <About />
@@ -57,7 +64,7 @@ class Muskie extends Component {
                 <Service />
 
                 {/* Importing Service */}
-                <GetInTouch />
+                <GetInTouch id="contact" />
                 
                 {/* Importing Footer */}
                 <Footer />

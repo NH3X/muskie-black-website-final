@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
     Container,
     Row,
-    Col
+    Col,
+    Button
 } from "reactstrap";
 
 
@@ -34,7 +35,7 @@ class Section extends Component {
                                     <p className='font-20 text-white'>Assisting your business virtually. Wherever. Whenever.</p>
 
                                     <div className="mt-4">
-                                        <Link to="#contact" className="btn btn-primary mt-2 mr-2">Enquire Now</Link>
+                                        <Button onClick={() => this.props.scrollToContact()} className="btn btn-primary mt-2 mr-2">Enquire Now</Button>
                                         {/* <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">Learn more</Link> */}
                                     </div>
                                 </div>
