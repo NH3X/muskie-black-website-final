@@ -17,7 +17,7 @@ class Muskie extends Component {
                 { id: 4, idnm: "contact", navheading: "Contact Us" }
             ],
             pos: document.documentElement.scrollTop,
-            imglight: false,
+            imglight: true,
             navClass: ""
         };
 
@@ -43,7 +43,7 @@ class Muskie extends Component {
             this.setState({ navClass: "nav-sticky", imglight: false });
         }
         else {
-            this.setState({ navClass: "", imglight: false });
+            this.setState({ navClass: "", imglight: true });
         }
     };
 

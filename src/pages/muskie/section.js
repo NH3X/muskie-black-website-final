@@ -29,8 +29,9 @@ class Section extends Component {
                         <Row className="justify-content-center">
                             <Col lg={8} className="align-content-center">
                                 <div className="hero-wrapper text-center" >
-                                    <p className="font-16 text-uppercase text-white-50">Discover Muskie Black Today</p>
-                                    <h1 className="hero-title text-white mb-4"><span className="text-primary">Muskie Black Management & Consulting</span><br /></h1>
+                                    {/* <p className="font-16 text-uppercase text-white-50">Discover Muskie Black Today</p> */}
+                                    <h1 className="hero-title text-white mb-5" style={{fontFamily: "Amsterdam", fontSize:"7em"}}>Muskie Black<br /></h1>
+                                    <h1 className="hero-title text-white mb-5" ><span className="text-primary">Management & Consulting</span><br /></h1>
 
                                     <p className='font-20 text-white'>Assisting your business virtually. Wherever. Whenever.</p>
 

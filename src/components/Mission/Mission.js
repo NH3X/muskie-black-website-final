@@ -11,7 +11,7 @@ const Mission = () => {
                     <Row>
                         <Col lg={3} >
                             <div className="hero-wrapper">
-                                <h1 className="hero-title text-white ">Our Mission</h1>
+                                <h1 className="hero-title text-white" style={{fontFamily: "Amsterdam", fontSize:"3em"}}>Our Mission</h1>
                             </div>
                         </Col>
                         <Col>

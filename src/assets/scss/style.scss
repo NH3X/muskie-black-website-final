@@ -24,6 +24,14 @@ File: Main scss file
     1.General
 *******************/
 
+@font-face {
+  font-family: "Amsterdam";
+  src: url("../fonts/materialdesignicons-webfont.eot");
+  src: url("../fonts/amsterdam-webfont.woff") format("woff"),
+  url("../fonts/amsterdam-webfont.woff2") format("woff2"),
+  url("../fonts/materialdesignicons-webfont.svg") format("svg");
+}
+
 body {
     font-size: $font-size-base;
     color: $body-color;
