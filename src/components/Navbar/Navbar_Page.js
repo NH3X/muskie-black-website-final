@@ -44,40 +44,78 @@ class NavbarPage extends Component {
             )
         });
         return (
-            <React.Fragment>
-                <Navbar expand="lg" fixed="top" className={"navbar-custom sticky sticky-dark " + this.props.navClass}>
-                    <Container>
-                        <NavbarBrand className="logo text-uppercase" href="/">
-                            {
-                                this.props.imglight === true ?
-                                    <img src={logolight} alt="" className="logo-light" height="60" />
-                                    : <img src={logodark} alt="" className="logo-dark" height="60" />
-                            }
-                        </NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} ><i className="mdi mdi-menu"></i></NavbarToggler>
+			<React.Fragment>
+				<Navbar
+					expand="lg"
+					fixed="top"
+					className={
+						"navbar-custom sticky sticky-dark " +
+						this.props.navClass
+					}
+				>
+					<Container>
+						<NavbarBrand className="logo text-uppercase" href="/">
+							{this.props.imglight === true ? (
+								<img
+									src={logolight}
+									alt=""
+									className="logo-light"
+                                    style={{opacity: "0.8"}}
+									height="50"
+								/>
+							) : (
+								<img
+									src={logodark}
+									alt=""
+									className="logo-dark "
+									height="50"
+								/>
+							)}
+						</NavbarBrand>
+						<NavbarToggler onClick={this.toggle}>
+							<i className="mdi mdi-menu"></i>
+						</NavbarToggler>
 
-                        <Collapse id="navbarCollapse" isOpen={this.state.isOpenMenu} navbar>
-                            <ScrollspyNav
-                                scrollTargetIds={targetId}
-                                scrollDuration="200"
-                                headerBackground="true"
-                                activeNavClass="active"
-                                className="navbar-collapse"
-                            >
-                                <Nav navbar className="ml-auto navbar-center" id="mySidenav">
-                                    {this.props.navItems.map((item, key) => (
-                                        <NavItem key={key} className={item.navheading === "Home" ? "active" : ""}>
-                                            <NavLink href={"#" + item.idnm} > {item.navheading}</NavLink>
-                                        </NavItem>
-                                    ))}
-                                </Nav>
-                                {/* <Button color="success" className="btn-rounded navbar-btn">Try for Free</Button> */}
-                            </ScrollspyNav>
-                        </Collapse>
-                    </Container>
-                </Navbar>
-            </React.Fragment>
-        );
+						<Collapse
+							id="navbarCollapse"
+							isOpen={this.state.isOpenMenu}
+							navbar
+						>
+							<ScrollspyNav
+								scrollTargetIds={targetId}
+								scrollDuration="200"
+								headerBackground="true"
+								activeNavClass="active"
+								className="navbar-collapse"
+							>
+								<Nav
+									navbar
+									className="ml-auto navbar-center"
+									id="mySidenav"
+								>
+									{this.props.navItems.map((item, key) => (
+										<NavItem
+											key={key}
+											className={
+												item.navheading === "Home"
+													? "active"
+													: ""
+											}
+										>
+											<NavLink href={"#" + item.idnm}>
+												{" "}
+												{item.navheading}
+											</NavLink>
+										</NavItem>
+									))}
+								</Nav>
+								{/* <Button color="success" className="btn-rounded navbar-btn">Try for Free</Button> */}
+							</ScrollspyNav>
+						</Collapse>
+					</Container>
+				</Navbar>
+			</React.Fragment>
+		)
     }
 }
 

@@ -15,7 +15,7 @@ class FooterLinks extends Component {
                     <Col lg={12}>
                         <div className="float-sm-left">
                             <Link to="#">
-                                <img src={logolight} alt="" height="20"/>
+                                <img src={logolight} alt="" height="35"/>
                             </Link>
                         </div>
                         <div className="float-sm-right mt-4 mt-sm-0">
