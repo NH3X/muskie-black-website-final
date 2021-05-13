@@ -18,7 +18,7 @@ import bg4 from "../../assets/images/muskie_bg4.jpg"
 import AvInputContainer from 'availity-reactstrap-validation/lib/AvInputContainer';
 
 
-class Section extends Component {
+class   Section extends Component {
 
     render() {
         return (
