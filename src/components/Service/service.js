@@ -64,13 +64,10 @@ class Process extends Component {
                 subtitle="Services"
                 title="What we do"
             />
-
                 <Row>
                     <ServiceBox services={this.state.services} />
                 </Row>
-                
             </Container>
-            
         </section>
             </React.Fragment>
         );

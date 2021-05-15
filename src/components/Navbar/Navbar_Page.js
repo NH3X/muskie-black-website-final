@@ -31,10 +31,6 @@ class NavbarPage extends Component {
     }
 
     render() {
-        // const navLinks = document.querySelectorAll('.nav-item')
-        // navLinks.forEach((l) => {
-        //     l.addEventListener('click', () => { this.toggle() })
-        // })
 
         //Store all Navigationbar Id into TargetID variable(Used for Scrollspy)
 
@@ -61,14 +57,14 @@ class NavbarPage extends Component {
 									alt=""
 									className="logo-light"
                                     style={{opacity: "0.8"}}
-									height="50"
+									height="55"
 								/>
 							) : (
 								<img
 									src={logodark}
 									alt=""
 									className="logo-dark "
-									height="50"
+									height="55"
 								/>
 							)}
 						</NavbarBrand>
