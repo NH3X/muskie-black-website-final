@@ -7,16 +7,14 @@ import {
     Button
 } from "reactstrap";
 
-
 //Import Images
-import homeImg from "../../assets/images/home-img.png";
-import bg from "../../assets/images/bg.jpg";
-import bg1 from "../../assets/images/muskie_bg.png";
+import homeImg from "../../assets/images/home-img.png"
+import bg from "../../assets/images/bg.jpg"
+import bg1 from "../../assets/images/muskie_bg.png"
 import bg2 from "../../assets/images/muskie_bg2.jpg"
 import bg3 from "../../assets/images/muskie_bg3.jpg"
 import bg4 from "../../assets/images/muskie_bg4.jpg"
-import AvInputContainer from 'availity-reactstrap-validation/lib/AvInputContainer';
-
+import AvInputContainer from 'availity-reactstrap-validation/lib/AvInputContainer'
 
 class   Section extends Component {
 
