@@ -1,5 +1,6 @@
 {
   "name": "muskie-black",
+  "homepage": "https://www.muskieblack.co.za/",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
