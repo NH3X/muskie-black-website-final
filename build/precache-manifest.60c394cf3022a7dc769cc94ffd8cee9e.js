@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34103d813aa87f6193b31ad7ec39fd8d",
+    "revision": "a51073d78386f9cd0eacaa822dccb6d1",
     "url": "/index.html"
   },
   {
-    "revision": "a5519b1f7cc1e1638b45",
-    "url": "/static/css/main.8710a25e.chunk.css"
+    "revision": "cd50663b88420e21d032",
+    "url": "/static/css/main.f7f5480b.chunk.css"
   },
   {
-    "revision": "5b238fb9a8e3ea242fb8",
-    "url": "/static/js/2.0e79f21a.chunk.js"
+    "revision": "336962db27572eef3457",
+    "url": "/static/js/2.c4e01d1f.chunk.js"
   },
   {
     "revision": "3f2e1ff0d15dc835e00724af8791d834",
-    "url": "/static/js/2.0e79f21a.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c4e01d1f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5519b1f7cc1e1638b45",
-    "url": "/static/js/main.932d3566.chunk.js"
+    "revision": "cd50663b88420e21d032",
+    "url": "/static/js/main.1ed695fb.chunk.js"
   },
   {
     "revision": "7087f2717bcb03d67f52",
@@ -52,6 +52,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/materialdesignicons-webfont.3ac50b5b.ttf"
   },
   {
+    "revision": "51b68d0604660b53c44400ccdef379c0",
+    "url": "/static/media/materialdesignicons-webfont.51b68d06.svg"
+  },
+  {
     "revision": "7ec5dab7e7ff250971d2ff50379778dc",
     "url": "/static/media/materialdesignicons-webfont.7ec5dab7.woff2"
   },
@@ -62,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a32fa1f27abbfa96ff2f79e1ade723d5",
     "url": "/static/media/materialdesignicons-webfont.a32fa1f2.eot"
-  },
-  {
-    "revision": "c68a0a65b3a0be718f4c81c02c5f69ca",
-    "url": "/static/media/materialdesignicons-webfont.c68a0a65.svg"
   },
   {
     "revision": "386b5bb638a06bbb6a9899b5251e0754",

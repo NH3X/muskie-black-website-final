@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "feather-icons-react": "^0.4.1",
     "node-sass": "^4.13.1",
+    "nodemon": "^2.0.12",
     "react": "^16.13.1",
     "react-animated-css": "^1.2.1",
     "react-countup": "^4.3.3",
