@@ -39,12 +39,12 @@ class Footer extends Component {
 										administrative, consulting and creative
 										business support services{" "}
 									</p>
-									<a
-										href="/privacy"
+									<Link
+										to="/privacy"
                                         class="text-white"
 									>
 										View our Privacy Policy
-									</a>
+									</Link>
 								</div>
 							</Col>
 
