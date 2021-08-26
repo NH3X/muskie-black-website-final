@@ -1,11 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 const PrivacyPolicy = () => {
+
+	useEffect(() =>{
+		window.scrollTo(0, 0)
+	}, [])
+
 	return (
 		<div style={{padding: "15px"}}>
+			<p>
 			<a href="/">back to homepage</a>
-			<h1> Black Management and Consulting</h1>
-			<h2>Privacy Policy </h2>
+			</p>
+			
+			<h1>Privacy Policy</h1>
 			<h3>Overview</h3>
 			<p>
 				Muskie Black Management and Consulting is strongly committed to
