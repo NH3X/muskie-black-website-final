@@ -1,31 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.f7f5480b.chunk.css",
-    "main.js": "/static/js/main.7a15ea2f.chunk.js",
-    "main.js.map": "/static/js/main.7a15ea2f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.44ffeccc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.44ffeccc.js.map",
-    "static/js/2.7bb1f6f6.chunk.js": "/static/js/2.7bb1f6f6.chunk.js",
-    "static/js/2.7bb1f6f6.chunk.js.map": "/static/js/2.7bb1f6f6.chunk.js.map",
+    "main.css": "/static/css/main.263dd982.css",
+    "main.js": "/static/js/main.c7439cfc.js",
+    "static/media/materialdesignicons-webfont.svg": "/static/media/materialdesignicons-webfont.5ca051e39ff60a4bcd89.svg",
+    "static/media/muskie_bg.png": "/static/media/muskie_bg.589273bc7e5b66527cd0.png",
+    "static/media/materialdesignicons-webfont.eot": "/static/media/materialdesignicons-webfont.2841b083a303ab267a81.eot",
+    "static/media/materialdesignicons-webfont.ttf?v=4.4.95": "/static/media/materialdesignicons-webfont.f045a8ae3f34af08bdea.ttf",
+    "static/media/muskie_bg4.jpg": "/static/media/muskie_bg4.99c1f40fda852beead65.jpg",
+    "static/media/muskie_bg2.jpg": "/static/media/muskie_bg2.d2de3ef618c4ce313cf3.jpg",
+    "static/media/materialdesignicons-webfont.woff?v=4.4.95": "/static/media/materialdesignicons-webfont.66e3254e393b183db8b5.woff",
+    "static/media/materialdesignicons-webfont.woff2?v=4.4.95": "/static/media/materialdesignicons-webfont.d48b5ff64021eea658bd.woff2",
+    "static/media/muskie_bg3.jpg": "/static/media/muskie_bg3.6e57e4ba77b49557e6c5.jpg",
+    "static/media/home-img.png": "/static/media/home-img.120371a91a06d15b38d1.png",
+    "static/media/bg.jpg": "/static/media/bg.21105c5f60a3cad21681.jpg",
+    "static/media/amsterdam-webfont.woff": "/static/media/amsterdam-webfont.10cf5450a54f39e4b917.woff",
+    "static/media/amsterdam-webfont.woff2": "/static/media/amsterdam-webfont.ad049734fe2152a98a33.woff2",
+    "static/media/logo-dark.png": "/static/media/logo-dark.14bcde668bad11937d1b.png",
+    "static/media/logo-light2.png": "/static/media/logo-light2.96f19afbfbf5709ae083.png",
     "index.html": "/index.html",
-    "precache-manifest.d312074a8899a45eb141656e073375e1.js": "/precache-manifest.d312074a8899a45eb141656e073375e1.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.f7f5480b.chunk.css.map": "/static/css/main.f7f5480b.chunk.css.map",
-    "static/js/2.7bb1f6f6.chunk.js.LICENSE.txt": "/static/js/2.7bb1f6f6.chunk.js.LICENSE.txt",
-    "static/media/theme.scss": "/static/media/muskie_bg4.2951d009.jpg",
-    "static/media/bg.jpg": "/static/media/bg.3dc6eb74.jpg",
-    "static/media/home-img.png": "/static/media/home-img.b7340a70.png",
-    "static/media/logo-dark.png": "/static/media/logo-dark.341e3b6c.png",
-    "static/media/logo-light2.png": "/static/media/logo-light2.223ec2b9.png",
-    "static/media/materialdesignicons.min.css": "/static/media/materialdesignicons-webfont.a32fa1f2.eot",
-    "static/media/muskie_bg.png": "/static/media/muskie_bg.386b5bb6.png",
-    "static/media/muskie_bg2.jpg": "/static/media/muskie_bg2.01b23533.jpg",
-    "static/media/muskie_bg3.jpg": "/static/media/muskie_bg3.030be37b.jpg"
+    "main.263dd982.css.map": "/static/css/main.263dd982.css.map",
+    "main.c7439cfc.js.map": "/static/js/main.c7439cfc.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.44ffeccc.js",
-    "static/js/2.7bb1f6f6.chunk.js",
-    "static/css/main.f7f5480b.chunk.css",
-    "static/js/main.7a15ea2f.chunk.js"
+    "static/css/main.263dd982.css",
+    "static/js/main.c7439cfc.js"
   ]
 }
