@@ -25,6 +25,9 @@ class Muskie extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.scrollNavigation, true);
+        console.log(process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID)
+        console.log("this is here")
+
     }
 
     componentWillUnmount() {
