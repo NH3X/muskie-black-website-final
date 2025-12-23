@@ -1,37 +1,29 @@
 {
 	"name": "muskie-black",
 	"homepage": "https://www.muskieblack.co.za/",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"private": true,
 	"dependencies": {
-		"@emailjs/browser": "^3.6.2",
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.3.2",
-		"@testing-library/user-event": "^7.1.2",
-		"availity-reactstrap-validation": "^2.7.1",
-		"bootstrap": "^4.5.0",
-		"dotenv": "^8.2.0",
-		"emailjs-com": "^2.6.4",
-		"express": "^4.17.1",
-		"feather-icons-react": "^0.4.1",
-		"nodemon": "^2.0.12",
-		"react": "^16.13.1",
-		"react-animated-css": "^1.2.1",
-		"react-countup": "^4.3.3",
-		"react-dom": "^16.13.1",
-		"react-fade-in": "^1.0.0",
-		"react-hook-form": "^7.0.3",
-		"react-image-lightbox": "^5.1.1",
-		"react-modal-video": "^1.2.3",
-		"react-owl-carousel": "^2.3.1",
-		"react-parallax": "^3.0.3",
-		"react-router-dom": "^5.1.2",
+		"@emailjs/browser": "^4.4.1",
+		"@testing-library/jest-dom": "^6.5.0",
+		"@testing-library/react": "^16.0.1",
+		"@testing-library/user-event": "^14.5.2",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.2",
+		"feather-icons-react": "^0.7.0",
+		"framer-motion": "^11.15.0",
+		"react": "^18.3.1",
+		"react-countup": "^6.5.3",
+		"react-dom": "^18.3.1",
+		"react-hook-form": "^7.54.2",
+		"react-image-lightbox": "^5.1.4",
+		"react-modal-video": "^2.0.2",
+		"react-parallax": "^3.5.1",
+		"react-router-dom": "^6.28.0",
 		"react-scripts": "^5.0.1",
-		"react-slick": "^0.26.1",
-		"react-sticky-header": "^0.2.0",
-		"react-text-rotator": "^0.1.1",
-		"react-youtube": "^7.11.2",
-		"reactstrap": "^8.4.1"
+		"react-slick": "^0.30.2",
+		"react-youtube": "^10.1.0",
+		"slick-carousel": "^1.8.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -55,6 +47,9 @@
 		]
 	},
 	"devDependencies": {
-		"sass": "^1.52.0"
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
+		"sass": "^1.95.0",
+		"tailwindcss": "^3.4.17"
 	}
 }

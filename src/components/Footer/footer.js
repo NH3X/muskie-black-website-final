@@ -1,140 +1,115 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Media } from "reactstrap";
 import FeatherIcon from 'feather-icons-react';
-
-//Import Footer link
 import FooterLinks from "./footer-links";
 
-class Footer extends Component {
-    state = {
-        links1 : [
-            { link : "#", title : "About Us" },
-            { link : "#", title : "Media & Press" },
-            { link : "#", title : "Career" },
-            { link : "#", title : "Blog" },
-        ],
-        links2 : [
-            { link : "#", title : "Pricing" },
-            { link : "#", title : "For Marketing" },
-            { link : "#", title : "For CEOs" },
-            { link : "#", title : "For Agencies" },
-            { link : "#", title : "Our Apps" },
-        ],
-    }
-    render() {
-        return (
-			<React.Fragment>
-				<footer className="footer">
-					<Container>
-						<Row>
-							<Col lg={4} sm={6}>
-								<div>
-									<h5 className="mb-4 footer-list-title">
-										About Muskie Black
-									</h5>
-									<p>
-										We are skilled, independent
-										professionals who remotely provide
-										administrative, consulting and creative
-										business support services{" "}
-									</p>
-									<Link
-										to="/privacy"
-                                        class="text-white"
-									>
-										View our Privacy Policy
-									</Link>
-								</div>
-							</Col>
+function Footer() {
+    return (
+        <>
+            <footer className="bg-navy-dark text-white/70 pt-16 pb-8">
+                <div className="container mx-auto px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                        {/* Brand Column */}
+                        <div className="lg:col-span-2">
+                            <h3 className="brand-text text-white text-3xl mb-6">
+                                Muskie Black
+                            </h3>
+                            <p className="text-white/60 leading-relaxed mb-6 max-w-md">
+                                We are skilled, independent professionals who remotely provide
+                                administrative, consulting and creative business support services.
+                            </p>
 
-							<Col></Col>
+                            {/* Social links */}
+                            <div className="flex gap-3">
+                                <a
+                                    href="https://www.facebook.com/MuskieBlack"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-colors"
+                                >
+                                    <FeatherIcon icon="facebook" className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/muskie_black"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-colors"
+                                >
+                                    <FeatherIcon icon="instagram" className="w-4 h-4" />
+                                </a>
+                            </div>
+                        </div>
 
-							<Col lg={4} sm={6}>
-								<div>
-									<h5 className="mb-4 footer-list-title">
-										Contact
-									</h5>
+                        {/* Quick Links */}
+                        <div>
+                            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">
+                                Quick Links
+                            </h4>
+                            <ul className="space-y-3">
+                                {[
+                                    { label: 'Home', href: '#home' },
+                                    { label: 'About Us', href: '#about' },
+                                    { label: 'Services', href: '#services' },
+                                    { label: 'Contact', href: '#contact' },
+                                ].map((link, index) => (
+                                    <li key={index}>
+                                        <a
+                                            href={link.href}
+                                            className="text-white/60 hover:text-accent transition-colors inline-flex items-center gap-2"
+                                        >
+                                            <span className="w-1.5 h-1.5 bg-accent/50 rounded-full"></span>
+                                            {link.label}
+                                        </a>
+                                    </li>
+                                ))}
+                                <li>
+                                    <Link
+                                        to="/privacy"
+                                        className="text-white/60 hover:text-accent transition-colors inline-flex items-center gap-2"
+                                    >
+                                        <span className="w-1.5 h-1.5 bg-accent/50 rounded-full"></span>
+                                        Privacy Policy
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
 
-									<div>
-										<Media>
-											<i>
-												<FeatherIcon
-													icon="mail"
-													className="icon-dual-light icons-sm mt-1 mr-2"
-												/>
-											</i>
-											<Media body>
-												<p>info@muskieblack.co.za</p>
-											</Media>
-										</Media>
-										<Media>
-											<i>
-												<FeatherIcon
-													icon="phone"
-													className="icon-dual-light icons-sm mt-1 mr-2"
-												/>
-											</i>
-											<Media body>
-												<p>+27 73 224 7068</p>
-											</Media>
-										</Media>
-										<Media>
-											<i>
-												<FeatherIcon
-													icon="facebook"
-													className="icon-dual-light icons-sm mt-1 mr-2"
-												/>
-											</i>
-											<Media body>
-												<p
-													style={{
-														position: "relative",
-													}}
-												>
-													Muskie Black Management &
-													Consulting
-													<a
-														className="stretched-link"
-														target="_blank"
-														href="https://www.facebook.com/MuskieBlack"
-													></a>
-												</p>
-											</Media>
-										</Media>
-										<Media>
-											<i>
-												<FeatherIcon
-													icon="instagram"
-													className="icon-dual-light icons-sm mt-1 mr-2"
-												/>
-											</i>
-											<Media body>
-												<p
-													style={{
-														position: "relative",
-													}}
-												>
-													@muskie_black
-													<a
-														className="stretched-link"
-														target="_blank"
-														href="http://www.instagram.com/muskie_black"
-													></a>
-												</p>
-											</Media>
-										</Media>
-									</div>
-								</div>
-							</Col>
-						</Row>
-					</Container>
-				</footer>
-				{/* Render footer links */}
-				<FooterLinks />
-			</React.Fragment>
-		)
-    }
+                        {/* Contact Info */}
+                        <div>
+                            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">
+                                Contact Us
+                            </h4>
+                            <ul className="space-y-4">
+                                <li>
+                                    <a
+                                        href="mailto:info@muskieblack.co.za"
+                                        className="flex items-start gap-3 text-white/60 hover:text-white transition-colors"
+                                    >
+                                        <FeatherIcon icon="mail" className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
+                                        <span>info@muskieblack.co.za</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="tel:+27732247068"
+                                        className="flex items-start gap-3 text-white/60 hover:text-white transition-colors"
+                                    >
+                                        <FeatherIcon icon="phone" className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
+                                        <span>+27 73 224 7068</span>
+                                    </a>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/60">
+                                    <FeatherIcon icon="map-pin" className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
+                                    <span>South Africa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <FooterLinks />
+        </>
+    );
 }
 
 export default Footer;

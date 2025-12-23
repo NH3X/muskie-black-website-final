@@ -1,212 +1,258 @@
-import React, { Component } from "react";
-import { Container, Row, Col, FormGroup, Label } from "reactstrap";
-import { AvForm, AvField } from "availity-reactstrap-validation";
-import { Animated } from "react-animated-css";
-import emailjs from 'emailjs-com'
-
-//Import Section Title
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { send } from '@emailjs/browser';
 import SectionTitle from "../common/section-title";
-import Spinner from "reactstrap/lib/Spinner";
+import FeatherIcon from 'feather-icons-react';
 
-class GetInTouch extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstname: "",
-      email: "",
-      subject: "",
-      message: "",
-      msgSendSuccess: false,
-      msgSending: false,
-      hideForm: false
-    };
-  }
- 
-  handleSubmit = async () => {
-    let emailPattern = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
+function GetInTouch() {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const [msgSendSuccess, setMsgSendSuccess] = useState(false);
+    const [msgSending, setMsgSending] = useState(false);
+    const [submittedName, setSubmittedName] = useState("");
 
-    if (
-      this.state.firstname !== "" &&
-      this.state.email !== "" &&
-      emailPattern.test(this.state.email) &&
-      this.state.subject !== "" &&
-      this.state.message !== ""
-    ) {
-      this.setState({ msgSending: true })
-      try {
-        const templateParams = {
-          name: this.state.firstname,
-          email: this.state.email,
-          subject: this.state.subject,
-          message: this.state.message
+    const onSubmit = async (data) => {
+        setMsgSending(true);
+
+        try {
+            const templateParams = {
+                name: data.firstname,
+                email: data.email,
+                subject: data.subject,
+                message: data.message
+            };
+
+            await send(
+                process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID,
+                process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID,
+                templateParams,
+                process.env.REACT_APP_CONTACT_EMAIL_USER_ID
+            );
+
+            setSubmittedName(data.firstname);
+            setMsgSendSuccess(true);
+            setMsgSending(false);
+            reset();
+            console.log("Success!");
+        } catch (e) {
+            setMsgSendSuccess(false);
+            setMsgSending(false);
+            console.log("Failed!", e);
         }
+    };
 
-        await emailjs.send(
-          `${process.env.REACT_APP_CONTACT_EMAIL_SERVICE_ID}`,
-          `${process.env.REACT_APP_CONTACT_EMAIL_TEMPLATE_ID}`,
-          templateParams,
-          `${process.env.REACT_APP_CONTACT_EMAIL_USER_ID}`
-        ).then(response => {
-          this.setState({ msgSendSuccess: true, msgSending: false });
-          console.log("Success!", response.status, response.text)
-          this.myFormRef.reset();
-        })
-      } catch (e) {
-        this.setState({ msgSendSuccess: false, msgSending: false });
-        console.log("Failed!", e)
-      }
-    }
-  };
+    const contactInfo = [
+        {
+            icon: "mail",
+            label: "Email",
+            value: "info@muskieblack.co.za",
+            href: "mailto:info@muskieblack.co.za"
+        },
+        {
+            icon: "phone",
+            label: "Phone",
+            value: "+27 73 224 7068",
+            href: "tel:+27732247068"
+        },
+        {
+            icon: "instagram",
+            label: "Instagram",
+            value: "@muskie_black",
+            href: "https://www.instagram.com/muskie_black"
+        }
+    ];
 
-  onInputChangeHandler = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-
-    this.setState({ [name]: value });
-  };
-
-  render() {
     return (
-      <React.Fragment>
-        <section className="section bg-light" id="contact">
-          <Container>
-            
-            <SectionTitle
-              subtitle="Contact Us"
-              title="Get In Touch"
-            />
-            <div className="custom-form pt-4 mt-4">
-              
+        <section className="section-padding bg-cream-dark relative overflow-hidden" id="contact">
+            {/* Background decorations */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2 hidden lg:block"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-navy/5 rounded-full translate-y-1/2 -translate-x-1/2 hidden lg:block"></div>
 
-              <div id="message">
-                {this.state.msgSendSuccess ? (
-                  <Animated
-                    animationIn="bounceIn"
-                    animationOut="flash"
-                    animationInDuration={1000}
-                    animationOutDuration={1000}
-                    isVisible={true}
-                  >
-                    <fieldset>
-                      <div id="success_page">
-                        <h3 className="text-primary">Email Sent Successfully.</h3>
-                        <p>
-                          Thank you <strong>{this.state.firstname}</strong>,
-                          your message has been submitted to us. Someone will be in touch with you shortly.
-                        </p>
-                      </div>
-                    </fieldset>
-                  </Animated>
-                ) : null}
-              </div>
+            <div className="container mx-auto px-6 lg:px-8 relative z-10">
+                <SectionTitle
+                    subtitle="Contact Us"
+                    title="Get In Touch"
+                    desc="Ready to transform your business? Let's discuss how we can help you achieve your goals."
+                />
 
-              {
-                this.state.msgSending ?
-                  (
-                    <div className="d-flex justify-content-center float">
-                      <Spinner
-                        style={{ width: '3rem', height: '3rem' }} />
+                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                    {/* Contact Info Column */}
+                    <div className="lg:col-span-4">
+                        <div className="bg-navy p-8 lg:p-10 h-full relative overflow-hidden">
+                            {/* Background image for card */}
+                            <img
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                                alt=""
+                                className="absolute inset-0 w-full h-full object-cover opacity-10"
+                            />
+
+                            {/* Decorative element */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 -translate-y-1/2 translate-x-1/2"></div>
+
+                            <h3 className="relative z-10 text-white text-2xl font-semibold mb-8">Contact Information</h3>
+
+                            <div className="space-y-8 relative z-10">
+                                {contactInfo.map((info, index) => (
+                                    <a
+                                        key={index}
+                                        href={info.href}
+                                        target={info.icon === 'instagram' ? '_blank' : undefined}
+                                        rel={info.icon === 'instagram' ? 'noopener noreferrer' : undefined}
+                                        className="group flex items-start gap-4 text-white/70 hover:text-white transition-colors"
+                                    >
+                                        <span className="flex-shrink-0 w-12 h-12 bg-white/10 flex items-center justify-center group-hover:bg-accent transition-colors">
+                                            <FeatherIcon icon={info.icon} className="w-5 h-5" />
+                                        </span>
+                                        <div>
+                                            <span className="block text-xs uppercase tracking-wider text-white/50 mb-1">{info.label}</span>
+                                            <span className="text-white">{info.value}</span>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+
+                            {/* Social links */}
+                            <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
+                                <span className="text-xs uppercase tracking-wider text-white/50 mb-4 block">Follow Us</span>
+                                <div className="flex gap-3">
+                                    <a
+                                        href="https://www.facebook.com/MuskieBlack"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-colors"
+                                    >
+                                        <FeatherIcon icon="facebook" className="w-4 h-4" />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/muskie_black"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-colors"
+                                    >
+                                        <FeatherIcon icon="instagram" className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  ) : (
-                    <AvForm
-                      name="contact-form"
-                      id="contact-form"
-                      ref={(el) => (this.myFormRef = el)}
-                      onSubmit={(e) => this.handleSubmit(e)}
-                    >
-                      <Row>
-                        <Col md="4">
-                          <FormGroup>
-                            <Label for="name">Name</Label>
-                            <AvField
-                              name="firstname"
-                              placeholder="Your name..."
-                              type="text"
-                              disabled={this.state.msgSending}
-                              errorMessage="Enter First Name"
-                              className="form-control"
-                              validate={{ required: { value: true } }}
-                              id="validationCustom01"
-                              onChange={(e) => this.onInputChangeHandler(e)}
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col md="4">
-                          <FormGroup>
-                            <Label for="email">Email address</Label>
-                            <AvField
-                              name="email"
-                              placeholder="Your email..."
-                              type="email"
-                              disabled={this.state.msgSending}
-                              errorMessage="Enter Valid Email Adress"
-                              className="form-control"
-                              validate={{
-                                required: { value: true },
-                                email: { value: true },
-                              }}
-                              onChange={(e) => this.onInputChangeHandler(e)}
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col md="4">
-                          <FormGroup>
-                            <Label for="subject">Subject</Label>
-                            <AvField
-                              name="subject"
-                              placeholder="Your Subject.."
-                              type="text"
-                              disabled={this.state.msgSending}
-                              errorMessage="Enter Subject Name"
-                              className="form-control"
-                              validate={{ required: { value: true } }}
-                              id="validationCustom01"
-                              onChange={(e) => this.onInputChangeHandler(e)}
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="12">
-                          <FormGroup>
-                            <Label for="message">Message</Label>
-                            <AvField
-                              type="textarea"
-                              name="message"
-                              id="message"
-                              disabled={this.state.msgSending}
-                              rows="4"
-                              className="form-control"
-                              errorMessage="Enter your message."
-                              placeholder="Your message..."
-                              validate={{ required: { value: true } }}
-                              onChange={(e) => this.onInputChangeHandler(e)}
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col sm="12" className="text-right">
-                          <input
-                            type="submit"
-                            id="submit"
-                            name="send"
-                            className="submitBnt btn btn-dark btn-custom"
-                            value="Send Message"
-                          />
-                          <div id="simple-msg"></div>
-                        </Col>
-                      </Row>
-                    </AvForm>
-                )
-              }
 
+                    {/* Form Column */}
+                    <div className="lg:col-span-8">
+                        {msgSendSuccess ? (
+                            <div className="bg-white p-8 lg:p-12 border border-gray-100 text-center">
+                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-semibold text-charcoal mb-3">Message Sent Successfully!</h3>
+                                <p className="text-charcoal-muted">
+                                    Thank you <span className="font-semibold text-accent">{submittedName}</span>,
+                                    your message has been submitted. We'll be in touch shortly.
+                                </p>
+                                <button
+                                    onClick={() => setMsgSendSuccess(false)}
+                                    className="mt-8 btn-outline"
+                                >
+                                    Send Another Message
+                                </button>
+                            </div>
+                        ) : msgSending ? (
+                            <div className="bg-white p-8 lg:p-12 border border-gray-100 flex flex-col items-center justify-center min-h-[400px]">
+                                <div className="w-12 h-12 border-4 border-accent/20 border-t-accent rounded-full animate-spin mb-4"></div>
+                                <p className="text-charcoal-muted">Sending your message...</p>
+                            </div>
+                        ) : (
+                            <form
+                                name="contact-form"
+                                id="contact-form"
+                                onSubmit={handleSubmit(onSubmit)}
+                                className="bg-white p-8 lg:p-12 border border-gray-100"
+                            >
+                                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-semibold text-charcoal mb-2 uppercase tracking-wider">
+                                            Name
+                                        </label>
+                                        <input
+                                            {...register("firstname", { required: "Name is required" })}
+                                            placeholder="Your name"
+                                            type="text"
+                                            className="input-field"
+                                        />
+                                        {errors.firstname && (
+                                            <p className="mt-2 text-sm text-red-500">{errors.firstname.message}</p>
+                                        )}
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-semibold text-charcoal mb-2 uppercase tracking-wider">
+                                            Email
+                                        </label>
+                                        <input
+                                            {...register("email", {
+                                                required: "Email is required",
+                                                pattern: {
+                                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                                    message: "Enter a valid email address"
+                                                }
+                                            })}
+                                            placeholder="Your email"
+                                            type="email"
+                                            className="input-field"
+                                        />
+                                        {errors.email && (
+                                            <p className="mt-2 text-sm text-red-500">{errors.email.message}</p>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="mb-8">
+                                    <label htmlFor="subject" className="block text-sm font-semibold text-charcoal mb-2 uppercase tracking-wider">
+                                        Subject
+                                    </label>
+                                    <input
+                                        {...register("subject", { required: "Subject is required" })}
+                                        placeholder="How can we help?"
+                                        type="text"
+                                        className="input-field"
+                                    />
+                                    {errors.subject && (
+                                        <p className="mt-2 text-sm text-red-500">{errors.subject.message}</p>
+                                    )}
+                                </div>
+
+                                <div className="mb-8">
+                                    <label htmlFor="message" className="block text-sm font-semibold text-charcoal mb-2 uppercase tracking-wider">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        {...register("message", { required: "Message is required" })}
+                                        id="message"
+                                        rows="5"
+                                        className="input-field resize-none"
+                                        placeholder="Tell us about your project..."
+                                    />
+                                    {errors.message && (
+                                        <p className="mt-2 text-sm text-red-500">{errors.message.message}</p>
+                                    )}
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="btn-primary w-full sm:w-auto"
+                                >
+                                    Send Message
+                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </form>
+                        )}
+                    </div>
+                </div>
             </div>
-          </Container>
         </section>
-      </React.Fragment>
     );
-  }
 }
 
 export default GetInTouch;

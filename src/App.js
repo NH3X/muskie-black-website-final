@@ -1,36 +1,21 @@
-import React, { Component } from "react";
-import routes from "./routes";
-import {
-  withRouter,
-  Route,
-  Switch,
-  BrowserRouter as Router
-} from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Muskie from "./pages/muskie/Index1";
+import PrivacyPolicy from "./pages/muskie/privacyPolicy";
 
 // Import Scss
 import "./theme.scss";
 
-//Import Icon Css
+// Import Icon Css
 import "./assets/css/materialdesignicons.min.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <Router>
-          <Switch>
-            {routes.map((route, idx) => (
-              <Route path={route.path} component={route.component} key={idx} />
-            ))}
-          </Switch>
-        </Router>
-      </React.Fragment>
-    );
-  }
+function App() {
+  return (
+    <Routes>
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/" element={<Muskie />} />
+    </Routes>
+  );
 }
 
-export default withRouter(App);
+export default App;

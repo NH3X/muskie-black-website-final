@@ -1,7 +1,8 @@
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
 import NavbarPage from "../../components/Navbar/Navbar_Page";
 import Section from './section';
 import Service from "../../components/Service/service";
+import Portfolio from "../../components/Portfolio/Portfolio";
 import Footer from "../../components/Footer/footer";
 import About from '../../components/About/about';
 import GetInTouch from '../../components/Contact/get-in-touch';
@@ -14,7 +15,8 @@ class Muskie extends Component {
                 { id: 1, idnm: "home", navheading: "Home" },
                 { id: 2, idnm: "about", navheading: "About Us" },
                 { id: 3, idnm: "services", navheading: "Services" },
-                { id: 4, idnm: "contact", navheading: "Contact Us" }
+                { id: 4, idnm: "portfolio", navheading: "Portfolio" },
+                { id: 5, idnm: "contact", navheading: "Contact Us" }
             ],
             pos: document.documentElement.scrollTop,
             imglight: true,
@@ -66,7 +68,10 @@ class Muskie extends Component {
                 {/* Importing Service */}
                 <Service />
 
-                {/* Importing Service */}
+                {/* Importing Portfolio */}
+                <Portfolio />
+
+                {/* Importing Contact */}
                 <GetInTouch id="contact" />
                 
                 {/* Importing Footer */}
