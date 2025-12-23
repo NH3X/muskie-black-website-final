@@ -1,28 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2cd8252.css",
-    "main.js": "/static/js/main.ac06df6b.js",
+    "main.css": "/static/css/main.5e23e13b.css",
+    "main.js": "/static/js/main.4f64d1f7.js",
     "static/media/materialdesignicons-webfont.svg": "/static/media/materialdesignicons-webfont.d45a533225a265d8bcf0.svg",
-    "static/media/muskie_bg.png": "/static/media/muskie_bg.589273bc7e5b66527cd0.png",
     "static/media/materialdesignicons-webfont.eot": "/static/media/materialdesignicons-webfont.2841b083a303ab267a81.eot",
     "static/media/materialdesignicons-webfont.ttf?v=4.4.95": "/static/media/materialdesignicons-webfont.f045a8ae3f34af08bdea.ttf",
     "static/media/muskie_bg4.jpg": "/static/media/muskie_bg4.99c1f40fda852beead65.jpg",
-    "static/media/muskie_bg2.jpg": "/static/media/muskie_bg2.d2de3ef618c4ce313cf3.jpg",
     "static/media/materialdesignicons-webfont.woff?v=4.4.95": "/static/media/materialdesignicons-webfont.66e3254e393b183db8b5.woff",
     "static/media/materialdesignicons-webfont.woff2?v=4.4.95": "/static/media/materialdesignicons-webfont.d48b5ff64021eea658bd.woff2",
-    "static/media/muskie_bg3.jpg": "/static/media/muskie_bg3.6e57e4ba77b49557e6c5.jpg",
-    "static/media/home-img.png": "/static/media/home-img.120371a91a06d15b38d1.png",
-    "static/media/bg.jpg": "/static/media/bg.21105c5f60a3cad21681.jpg",
     "static/media/amsterdam-webfont.woff": "/static/media/amsterdam-webfont.10cf5450a54f39e4b917.woff",
     "static/media/amsterdam-webfont.woff2": "/static/media/amsterdam-webfont.ad049734fe2152a98a33.woff2",
-    "static/media/logo-dark.png": "/static/media/logo-dark.14bcde668bad11937d1b.png",
-    "static/media/logo-light2.png": "/static/media/logo-light2.96f19afbfbf5709ae083.png",
     "index.html": "/index.html",
-    "main.c2cd8252.css.map": "/static/css/main.c2cd8252.css.map",
-    "main.ac06df6b.js.map": "/static/js/main.ac06df6b.js.map"
+    "main.5e23e13b.css.map": "/static/css/main.5e23e13b.css.map",
+    "main.4f64d1f7.js.map": "/static/js/main.4f64d1f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2cd8252.css",
-    "static/js/main.ac06df6b.js"
+    "static/css/main.5e23e13b.css",
+    "static/js/main.4f64d1f7.js"
   ]
 }
