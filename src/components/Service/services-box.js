@@ -9,27 +9,17 @@ const serviceImages = {
     "Web Development": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
 };
 
-function ServiceCard({ service, index, onLearnMore, variant = 'default' }) {
+function ServiceCard({ service, index, onLearnMore }) {
     const number = String(index + 1).padStart(2, '0');
     const image = serviceImages[service.title] || serviceImages["Graphic Design"];
 
-    // Different layouts based on variant
-    const isFeature = variant === 'feature';
-    const isVertical = variant === 'vertical';
-
     return (
         <div
-            className={`group relative overflow-hidden cursor-pointer
-                ${isFeature ? 'md:col-span-2 md:row-span-1' : ''}
-                ${isVertical ? 'md:row-span-2' : ''}
-            `}
+            className="group relative overflow-hidden cursor-pointer"
             onClick={() => onLearnMore && onLearnMore(service)}
         >
             {/* Main card container */}
-            <div className={`relative h-full bg-white
-                ${isFeature ? 'min-h-[400px] md:min-h-[450px]' : ''}
-                ${isVertical ? 'min-h-[500px] md:min-h-[600px]' : 'min-h-[400px]'}
-            `}>
+            <div className="relative h-full bg-white min-h-[350px] md:min-h-[400px]">
                 {/* Image container with overlay */}
                 <div className="absolute inset-0 overflow-hidden">
                     <img
@@ -55,38 +45,26 @@ function ServiceCard({ service, index, onLearnMore, variant = 'default' }) {
                 </div>
 
                 {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                     {/* Category label */}
-                    <div className="flex items-center gap-3 mb-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                    <div className="flex items-center gap-3 mb-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
                         <div className="w-8 h-px bg-gold"></div>
                         <span className="text-gold text-xs uppercase tracking-[0.25em] font-sans">Service</span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-display text-2xl md:text-3xl text-white mb-4 leading-tight group-hover:text-white transition-colors duration-300">
+                    <h3 className="font-display text-xl md:text-2xl text-white mb-3 leading-tight group-hover:text-white transition-colors duration-300">
                         {service.title}
                     </h3>
 
                     {/* Description - reveals on hover */}
-                    <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-md opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-150">
+                    <p className="text-white/60 text-sm leading-relaxed mb-4 max-w-md opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-150 line-clamp-2">
                         {service.desc}
                     </p>
 
-                    {/* Service items - minimal list */}
-                    <div className="flex flex-wrap gap-2 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                        {service.items.slice(0, 3).map((item, idx) => (
-                            <span
-                                key={idx}
-                                className="text-xs text-white/50 border border-white/20 px-3 py-1"
-                            >
-                                {item}
-                            </span>
-                        ))}
-                    </div>
-
                     {/* CTA */}
                     <div className="flex items-center gap-3 text-gold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-300">
-                        <span className="text-xs uppercase tracking-[0.2em] font-semibold">Explore</span>
+                        <span className="text-xs uppercase tracking-[0.2em] font-semibold">Learn More</span>
                         <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -94,7 +72,7 @@ function ServiceCard({ service, index, onLearnMore, variant = 'default' }) {
                 </div>
 
                 {/* Corner accent */}
-                <div className="absolute bottom-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute bottom-0 right-0 w-12 h-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute bottom-0 right-0 w-full h-px bg-gold/50"></div>
                     <div className="absolute bottom-0 right-0 h-full w-px bg-gold/50"></div>
                 </div>
@@ -103,19 +81,15 @@ function ServiceCard({ service, index, onLearnMore, variant = 'default' }) {
     );
 }
 
-function ServiceBox({ services, onLearnMore }) {
-    // Define layout variants for each service
-    const variants = ['feature', 'vertical', 'default', 'default', 'default'];
-
+function ServiceBox({ services, onLearnMore, startIndex = 0 }) {
     return (
         <>
             {services.map((service, index) => (
                 <ServiceCard
                     key={index}
                     service={service}
-                    index={index}
+                    index={startIndex + index}
                     onLearnMore={onLearnMore}
-                    variant={variants[index] || 'default'}
                 />
             ))}
         </>

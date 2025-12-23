@@ -55,13 +55,13 @@ const About = () => {
 
                             <div className="space-y-6 text-charcoal-light leading-relaxed">
                                 <p className="text-lg">
-                                    We are a reputable, <span className="text-accent font-semibold">100% female black owned company</span>, providing Consulting, Administrative and Graphic design services.
+                                    We are a reputable, <span className="text-accent font-semibold">100% female black owned company</span>, providing Consulting, Administrative and Graphic design services to businesses of all sizes.
                                 </p>
                                 <p>
-                                    We strive to deliver a seamless customer experience while providing the highest quality out-of-office services. We provide these services according to each clients' specific needs, and tailor make solutions; simplifying office management tasks.
+                                    Whether you're a startup finding your feet or an established enterprise seeking excellence, we deliver meticulous, personalised services tailored to your specific needs. Our boutique approach means you get dedicated attention, not cookie-cutter solutions.
                                 </p>
                                 <p>
-                                    The outsourcing of these tasks allows our clients to better focus on their core business, while remaining compliant and attractive to their target markets.
+                                    By partnering with us, you gain the expertise of a committed team who truly understands your business—allowing you to focus on growth while we handle the rest.
                                 </p>
                             </div>
 
@@ -69,8 +69,8 @@ const About = () => {
                             <div className="mt-10 grid sm:grid-cols-2 gap-4">
                                 {[
                                     'Tailored Solutions',
-                                    'Professional Service',
-                                    'Client-Focused',
+                                    'Boutique Quality',
+                                    'Dedicated Support',
                                     'B-BBEE Compliant'
                                 ].map((feature, index) => (
                                     <div key={index} className="flex items-center gap-3">

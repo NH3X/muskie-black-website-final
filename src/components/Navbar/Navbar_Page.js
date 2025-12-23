@@ -37,6 +37,8 @@ function NavbarPage({ navItems, navClass, imglight }) {
                                 isScrolled ? 'text-navy' : 'text-white'
                             }`}
                         >
+                            <span className={`font-semibold ${isScrolled ? 'text-gold' : 'text-gold'}`}>MB</span>
+                            <span className="mx-2 opacity-40">|</span>
                             Muskie Black
                         </span>
                     </a>

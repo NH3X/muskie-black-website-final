@@ -15,8 +15,7 @@ function Footer() {
                                 Muskie Black
                             </h3>
                             <p className="text-white/60 leading-relaxed mb-6 max-w-md">
-                                We are skilled, independent professionals who remotely provide
-                                administrative, consulting and creative business support services.
+                                Boutique business support with a personal touch. We partner with businesses of all sizes to deliver administrative, consulting, and creative services that make a difference.
                             </p>
 
                             {/* Social links */}
@@ -91,11 +90,11 @@ function Footer() {
                                 </li>
                                 <li>
                                     <a
-                                        href="tel:+27732247068"
+                                        href="tel:+27788936479"
                                         className="flex items-start gap-3 text-white/60 hover:text-white transition-colors"
                                     >
                                         <FeatherIcon icon="phone" className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
-                                        <span>+27 73 224 7068</span>
+                                        <span>+27 78 893 6479</span>
                                     </a>
                                 </li>
                                 <li className="flex items-start gap-3 text-white/60">

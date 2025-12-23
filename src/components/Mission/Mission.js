@@ -41,8 +41,7 @@ const Mission = () => {
                             <p className="text-white/90 text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
                                 To virtually provide clients with the highest quality{' '}
                                 <span className="text-accent font-medium">office administration</span> and{' '}
-                                <span className="text-accent font-medium">graphic design services</span>;
-                                allowing them to focus entirely on their core passion.
+                                <span className="text-accent font-medium">creative services</span>—with the care and attention of a dedicated in-house team, allowing them to focus entirely on their core passion.
                             </p>
 
                             {/* Closing quote */}

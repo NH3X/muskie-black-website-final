@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavbarPage from "../../components/Navbar/Navbar_Page";
 import Section from './section';
 import Service from "../../components/Service/service";
+import CTABanner from "../../components/CTA/CTABanner";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Footer from "../../components/Footer/footer";
 import About from '../../components/About/about';
@@ -67,6 +68,9 @@ class Muskie extends Component {
 
                 {/* Importing Service */}
                 <Service />
+
+                {/* CTA Banner - Visual break between sections */}
+                <CTABanner scrollToContact={this.scrollToContact} />
 
                 {/* Importing Portfolio */}
                 <Portfolio />

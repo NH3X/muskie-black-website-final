@@ -7,23 +7,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary orange accent
+        // Primary gold accent (unified palette)
         accent: {
-          DEFAULT: '#E87A2D',
-          light: '#F5954D',
-          dark: '#D06820',
-          50: '#FEF3EC',
-          100: '#FDE7D9',
-          200: '#FBCFB3',
-          300: '#F9B78D',
-          400: '#F19F67',
-          500: '#E87A2D',
-          600: '#D06820',
-          700: '#A85319',
-          800: '#803F13',
-          900: '#582B0D',
+          DEFAULT: '#C9A962',
+          light: '#D4BC7D',
+          dark: '#B8944A',
+          50: '#FCF9F3',
+          100: '#F7F0E0',
+          200: '#EDE0C4',
+          300: '#E0CCA3',
+          400: '#D4BC7D',
+          500: '#C9A962',
+          600: '#B8944A',
+          700: '#9A7A3D',
+          800: '#7C6231',
+          900: '#5E4A25',
         },
-        // Gold luxury accent
+        // Gold alias (same as accent for consistency)
         gold: {
           DEFAULT: '#C9A962',
           light: '#D4BC7D',
@@ -123,7 +123,8 @@ module.exports = {
         'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.08)',
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.12)',
         'soft-xl': '0 20px 60px -15px rgba(0, 0, 0, 0.15)',
-        'accent': '0 10px 40px -10px rgba(232, 122, 45, 0.3)',
+        'accent': '0 10px 40px -10px rgba(201, 169, 98, 0.3)',
+        'gold': '0 10px 40px -10px rgba(201, 169, 98, 0.3)',
         'navy': '0 10px 40px -10px rgba(26, 43, 74, 0.3)',
       },
     },

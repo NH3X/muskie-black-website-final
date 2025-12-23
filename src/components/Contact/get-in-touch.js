@@ -50,8 +50,8 @@ function GetInTouch() {
         {
             icon: "phone",
             label: "Phone",
-            value: "+27 73 224 7068",
-            href: "tel:+27732247068"
+            value: "+27 78 893 6479",
+            href: "tel:+27788936479"
         },
         {
             icon: "instagram",
@@ -71,7 +71,7 @@ function GetInTouch() {
                 <SectionTitle
                     subtitle="Contact Us"
                     title="Get In Touch"
-                    desc="Ready to transform your business? Let's discuss how we can help you achieve your goals."
+                    desc="Ready to elevate your business? Tell us about your project and we'll get back to you within 24 hours."
                 />
 
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">

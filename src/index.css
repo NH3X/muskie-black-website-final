@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    --accent: #E87A2D;
-    --accent-light: #F5954D;
-    --accent-dark: #D06820;
+    --accent: #C9A962;
+    --accent-light: #D4BC7D;
+    --accent-dark: #B8944A;
     --gold: #C9A962;
     --gold-light: #D4BC7D;
     --gold-dark: #B8944A;

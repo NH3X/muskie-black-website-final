@@ -61,14 +61,14 @@ function Section({ scrollToContact }) {
                     </div>
 
                     {/* Main heading with refined typography */}
-                    <h1 className="mb-6 animate-fade-in-up stagger-1">
+                    <h1 className="mb-1 animate-fade-in-up stagger-1">
                         <span className="brand-text text-white block text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9]">
                             Muskie Black
                         </span>
                     </h1>
 
                     {/* Elegant subtitle with styled ampersand */}
-                    <h2 className="text-xl sm:text-2xl md:text-3xl mb-10 animate-fade-in-up stagger-2">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 animate-fade-in-up stagger-2">
                         <span className="text-accent font-semibold tracking-wide">Management</span>
                         <span className="mx-4 brand-text-italic text-gold/60 text-2xl md:text-4xl">&</span>
                         <span className="text-accent font-semibold tracking-wide">Consulting</span>
@@ -82,8 +82,8 @@ function Section({ scrollToContact }) {
 
                     {/* Description with refined typography */}
                     <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-12 leading-relaxed animate-fade-in-up stagger-3" style={{ fontWeight: 300 }}>
-                        Assisting your business virtually.
-                        <span className="text-white/90 font-normal"> Wherever. Whenever.</span>
+                        Boutique business support, tailored to you.
+                        <span className="text-white/90 font-normal"> Your success is our business.</span>
                     </p>
 
                     {/* CTA Buttons with refined styling */}

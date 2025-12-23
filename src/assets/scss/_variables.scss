@@ -1,19 +1,25 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap');
-
-
-$primary:   #EC6A07;
-$success:   #EC6A07;
-$info:      #ff9a57;
+// Primary accent color (Gold)
+$primary:   #C9A962;
+$success:   #C9A962;
+$info:      #D4BC7D;
 $warning:   #FBB13C;
 $danger:    #f72626;
 $purple:    #9261c6;
 $pink:      #ff7aa3;
 $white:     #ffffff;
-$dark:      #0f0f0f;
-$light:     #f8fafe;
-$muted:     #a0a9b1;
+$dark:      #1A2B4A;
+$light:     #FAF8F5;
+$muted:     #6B6B6B;
+
+// Navy color
+$navy:      #1A2B4A;
+$navy-dark: #0F1A2E;
+
+// Cream background
+$cream:     #FAF8F5;
 
 // stylelint-disable
 $gray-100: #f8f9fa;
@@ -37,24 +43,22 @@ $colors: (
     "purple": $purple,
     "pink": $pink,
     "white": $white,
-    "light": $light
+    "light": $light,
+    "navy": $navy
 );
 
-$body-color:  #3f4549;
+$body-color:  #2D2D2D;
 
-$footer-bg:   #161616;
+$footer-bg:   #0F1A2E;
 
 $font-size-base : .9rem;
 
-$box-shadow:   0px 8px 35px 0px  rgba($gray-700, .05);
+$box-shadow:   0 4px 20px -2px rgba(0, 0, 0, 0.08);
 
+$font-family-primary: 'Lato', system-ui, sans-serif;
 
-$font-family-primary: 'Rubik', sans-serif;
-
-// Secondary font
-$font-family-secondary: 'Rubik', sans-serif;
-
-$font-family-tertiary: 'Amsterdam';
+// Secondary font (display/headings)
+$font-family-secondary: 'Playfair Display', Georgia, serif;
 
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
