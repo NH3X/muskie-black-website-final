@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/zhrahfsm/public_html/
-    - /bin/cp -R build/* $DEPLOYPATH
+    - /bin/cp -R build/* /home/zhrahfsm/public_html/
