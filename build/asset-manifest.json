@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e23e13b.css",
-    "main.js": "/static/js/main.4f64d1f7.js",
+    "main.css": "/static/css/main.47da6af3.css",
+    "main.js": "/static/js/main.9e9fb597.js",
     "static/media/materialdesignicons-webfont.svg": "/static/media/materialdesignicons-webfont.d45a533225a265d8bcf0.svg",
     "static/media/materialdesignicons-webfont.eot": "/static/media/materialdesignicons-webfont.2841b083a303ab267a81.eot",
     "static/media/materialdesignicons-webfont.ttf?v=4.4.95": "/static/media/materialdesignicons-webfont.f045a8ae3f34af08bdea.ttf",
@@ -11,11 +11,11 @@
     "static/media/amsterdam-webfont.woff": "/static/media/amsterdam-webfont.10cf5450a54f39e4b917.woff",
     "static/media/amsterdam-webfont.woff2": "/static/media/amsterdam-webfont.ad049734fe2152a98a33.woff2",
     "index.html": "/index.html",
-    "main.5e23e13b.css.map": "/static/css/main.5e23e13b.css.map",
-    "main.4f64d1f7.js.map": "/static/js/main.4f64d1f7.js.map"
+    "main.47da6af3.css.map": "/static/css/main.47da6af3.css.map",
+    "main.9e9fb597.js.map": "/static/js/main.9e9fb597.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e23e13b.css",
-    "static/js/main.4f64d1f7.js"
+    "static/css/main.47da6af3.css",
+    "static/js/main.9e9fb597.js"
   ]
 }
